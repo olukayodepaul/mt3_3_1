@@ -1,0 +1,36 @@
+<resources>
+    <string name="google_map_api_key">AIzaSyAUoAalxX7BMwO5G6LCPAV28azXPMMms1c</string>
+    <string name="app_name">MT3 Adhoc</string>
+    <string name="modules">Modules</string>
+    <string name="logout">Logout</string>
+    <string name="menu_sales">Customers</string>
+    <string name="menu_cust">Sales</string>
+    <string name="menu_history">Adhoc Staff Assessment Report</string>
+    <string name="menu_routemap">Route Map</string>
+    <string name="register">User Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_delivery_map">Customer Location</string>
+    <string name="collection_user_locations">user location</string>
+    <string name="title_activity_customer">CustomerActivity</string>
+    <string name="edit_profile">Save Change</string>
+    <string name="add_btn">Save</string>
+    <string name="edit_profile_edit">Sales Representative</string>
+    <string name="add_new_customer">Customers</string>
+    <string name="internal_storage">Internal storage</string>
+    <string name="fragment_camera2">Camera2</string>
+    <string name="_1_is_the_rep_complying_with_his_her_route_plan">1. Is the rep complying with his/her route plan?:</string>
+
+    <array name="stepOne">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+
+    <array name="stepTwo">
+        <item>Yes</item>
+        <item>No</item>
+    </array>
+
+
+</resources>

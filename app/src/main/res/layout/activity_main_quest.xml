@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.quest.QuestActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/brys"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            android:id="@+id/tool_bar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="2dip"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/back_page"
+                        android:layout_width="32dip"
+                        android:layout_height="36dip"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/button"
+                        android:src="@drawable/cancel_dip_black"
+                        tools:ignore="ContentDescription" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/back_button"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingEnd="8dip"
+                    android:paddingStart="8dip">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/back_button"
+                        android:gravity="center_vertical"
+                        android:paddingEnd="12dp"
+                        android:paddingStart="8dp"
+                        android:text="@string/menu_history"
+                        android:textColor="@color/blue_nblac"
+                        android:textSize="@dimen/modulesize"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tool_bar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_one">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/_1_is_the_rep_complying_with_his_her_route_plan"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_one_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepOne"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_two"
+                android:layout_below="@+id/q_one">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2. Is the rep complying with his/her route sequence?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_two_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/q_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/q_two">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3. What is the average time spent in an outlet?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <EditText
+                        android:id="@+id/q_three_inpute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/formborder"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_four"
+                android:layout_below="@+id/q_three">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="4. Is SOQ figure realistic?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_four_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_five"
+                android:layout_below="@+id/q_four">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="5. Is the customer receive the verification code?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_five_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_six"
+                android:layout_below="@+id/q_five">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="6. Can the rep post her/her transaction outside POS (Point Of Sales)?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_six_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_seven"
+                android:layout_below="@+id/q_six">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="7. Does Mobile Trader load-out correspond with the physical stock collected?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_seven_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_eight"
+                android:layout_below="@+id/q_seven">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="8. Is the line DND de-activated?:"
+                    android:textSize="12dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <Spinner
+                        android:id="@+id/q_eight_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_nine"
+                android:layout_below="@+id/q_eight">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="9. Is the customer's phone number correct?:"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/u_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="->phone: 08053383431"
+                    android:textSize="12dp"
+                    android:textColor="@color/module_child"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <Spinner
+                        android:id="@+id/q_nine_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <EditText
+                        android:id="@+id/q_nine_inpute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/formborder"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_ten"
+                android:layout_below="@+id/q_nine">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="10. Is the customer's name correct?:"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/cost_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="->customer name: Olusola Fadipe"
+                    android:textSize="12dp"
+                    android:textColor="@color/module_child"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <Spinner
+                        android:id="@+id/q_ten_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <EditText
+                        android:id="@+id/q_ten_inpute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/formborder"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/q_eleven"
+                android:layout_below="@+id/q_ten">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="11. Is the customer's address correct?:"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/cust_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="->customer name: Olusola Fadipe"
+                    android:textSize="12dp"
+                    android:textColor="@color/module_child"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <Spinner
+                        android:id="@+id/q_eleven_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:entries="@array/stepTwo"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinners">
+                    <EditText
+                        android:id="@+id/q_eleven_inpute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/formborder"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/design_login_btn"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:layout_below="@+id/q_eleven"
+                />
+
+        </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
